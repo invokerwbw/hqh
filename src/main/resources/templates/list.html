@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>第十届海内外高端人才交流会网上对接平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="Webkit"><!--开启高速渲染-->
+    <meta name="author" content="DZXC"><!--作者-->
+    <meta name="Keywords" content="第十届海内外高端人才交流会网上对接平台"><!--关键词-->
+    <meta name="description" content="bootstrap"><!--框架-->
+
+    <!--<link rel="shortcut icon" href="/img/favicon.ico">-->
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/css.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-12 ">
+        <div class="m-wrap-list">
+            <div class="m-title3 clearfix">
+                <p class="d-ul-title"><span class="list-title d-fleft" th:text="${title}"></span></p>
+            </div>
+            <div class="m-wrap7">
+                <div class="m-text4 list-group">
+                    <a class="list-group-item" th:href="@{/detail(type=${type},key=${row['obj01']})}"
+                       th:each="row : ${rows}">
+                        <h4 class="list-group-item-heading" th:text="${row['obj02']}"></h4>
+                        <!--<p class="list-group-item-text"></p>-->
+                        <h5>日期：<span th:text="${row['obj04']}"></span></h5>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="pager">
+                        <li th:class="${p['class']}" th:each="p : ${page}"><a th:href="@{${p['href']}}"
+                                                                              th:text="${p['name']}"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

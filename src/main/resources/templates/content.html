@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>第十届海内外高端人才交流会网上对接平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="Webkit"><!--开启高速渲染-->
+    <meta name="author" content="DZXC"><!--作者-->
+    <meta name="Keywords" content="第十届海内外高端人才交流会网上对接平台"><!--关键词-->
+    <meta name="description" content="bootstrap"><!--框架-->
+
+    <!--<link rel="shortcut icon" href="/img/favicon.ico">-->
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/css.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+</head>
+<body>
+<!--顶部-->
+
+
+<div class="box">
+    <div class="col-xs-12">
+        <div class="m-content">
+            <div class="page-header">
+                <h2 th:text="${detail['obj01']}"></h2>
+            </div>
+            <div class="m-info col-xs-12 clearfix">
+                <div class="col-xs-12 m-part1">[项目类型：<span th:text="${detail['obj02']}"></span>]</div>
+            </div>
+
+            <div class="m-content-text" th:if="${detail['type']} eq '3'">
+                <p class="centerText" th:if="${detail['obj03']}!=null" th:text="'姓名：'+${detail['obj03']}"></p>
+                <p class="centerText" th:if="${detail['obj04']}!=null" th:text="'性别：'+${detail['obj04']}"></p>
+                <p class="centerText" th:if="${detail['obj05']}!=null" th:text="'民族：'+${detail['obj05']}"></p>
+                <p class="centerText" th:if="${detail['obj12']}!=null" th:text="'国籍：'+${detail['obj12']}"></p>
+                <p class="centerText" th:if="${detail['obj06']}!=null" th:text="'出生日期：'+${detail['obj06']}"></p>
+                <p class="centerText" th:if="${detail['obj09']}!=null" th:text="'留学国别/地区：'+${detail['obj09']}"></p>
+                <p class="centerText" th:if="${detail['obj10']}!=null" th:text="'专业：'+${detail['obj10']}"></p>
+                <p class="centerText" th:if="${detail['obj17']}!=null" th:text="'学历：'+${detail['obj17']}"></p>
+                <p class="centerText" th:if="${detail['obj11']}!=null" th:text="'学位：'+${detail['obj11']}"></p>
+                <p class="centerText" th:if="${detail['obj14']}!=null" th:text="'学习经历：'+${detail['obj14']}"></p>
+                <p class="centerText" th:if="${detail['obj07']}!=null" th:text="'参加工作日期：'+${detail['obj07']}"></p>
+                <p class="centerText" th:if="${detail['obj08']}!=null" th:text="'工作单位及职务：'+${detail['obj08']}"></p>
+                <p class="centerText" th:if="${detail['obj15']}!=null" th:text="'工作经历：'+${detail['obj15']}"></p>
+                <p class="centerText" th:if="${detail['obj16']}!=null" th:text="'科研成果：'+${detail['obj16']}"></p>
+                <p class="centerText" th:if="${detail['obj13']}!=null" th:text="'个人项目信息：'+${detail['obj13']}"></p>
+            </div>
+            <div class="m-content-text" th:if="${detail['type']} eq '4'">
+                <p class="centerText" th:if="${detail['obj03']}!=null" th:text="'项目类别：'+${detail['obj03']}"></p>
+                <p class="centerText" th:if="${detail['obj04']}!=null" th:text="'单位名称：'+${detail['obj04']}"></p>
+                <p class="centerText" th:if="${detail['obj05']}!=null" th:text="'所属地区：'+${detail['obj05']}"></p>
+                <p class="centerText" th:if="${detail['obj06']}!=null" th:text="'单位地址：'+${detail['obj06']}"></p>
+                <p class="centerText" th:if="${detail['obj07']}!=null" th:text="'邮政编码：'+${detail['obj07']}"></p>
+                <p class="centerText" th:if="${detail['obj08']}!=null" th:text="'工商营业执照号码：'+${detail['obj08']}"></p>
+                <p class="centerText" th:if="${detail['obj09']}!=null" th:text="'项目信息：'+${detail['obj09']}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+/**
+ * 首页分了上下两部分，以那个地平线样式的亮线作为分界线
+**/
+.d-container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.d-fleft {
+    float: left;
+}
+
+.d-fright {
+    float: right;
+}
+
+.d-fontBlack {
+    color: #000000;
+}
+
+/*上部*/
+.d-top-area {
+    width: 100%;
+    height: auto !important;
+    min-height: 10rem;
+    padding-top: 5rem;
+    background-image: url(../img/top_bg.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #021C52;
+}
+
+.d-top-area .d-top-title {
+    width: 70%;
+    /*margin: 0 auto 0 auto;*/
+    margin-left: 21%;
+    display: block;
+}
+
+.d-top-area .d-top-title-mobile {
+    width: 70%;
+    margin: 0 auto 0 auto;
+    display: none;
+}
+
+/*轮播*/
+.d-top-area .d-slide-area {
+    width: 100%;
+    height: auto !important;
+    min-height: 10rem;
+}
+
+/*下部*/
+.d-bottom-area {
+    width: 100%;
+    height: auto !important;
+    min-height: 20rem;
+    background-image: url(../img/bottom_bg.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #001E53;
+    padding-top: 6rem;
+    padding-bottom: 13rem;
+}
+
+.d-bottom-area .d-xmfb-area {
+    width: 40%;
+    max-width: 50rem;
+    min-width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.5rem;
+}
+
+.d-bottom-area .d-xmfb-area .d-xmfb-img {
+    width: 62%;
+    max-width: 33rem;
+}
+
+.d-bottom-area .d-xmfb-area .d-xmfb-btn {
+    width: 26%;
+    max-width: 13rem;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+.d-bottom-area .d-list-area {
+    width: 70%;
+    min-width: 23rem;
+    height: auto !important;
+    min-height: 20rem;
+    margin: auto;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-top: 4px solid #5DFFFF;
+}
+
+.d-bottom-area .d-list-area .d-list-block {
+    width: 94%;
+    height: auto !important;
+    min-height: 20rem;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item {
+    width: 45%;
+    height: auto !important;
+    min-height: 20rem;
+    margin-left: 2rem;
+    float: left;
+    padding-bottom: 1rem;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item .d-ul-title {
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #5DFFFF;
+    color: #AC1F25;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item .d-ul-title .d-item-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item .d-ul-title .d-item-more {
+    font-size: 0.5rem;
+    cursor: pointer;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item .d-news-title {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item .d-news-title a {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #454545;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item .d-news-content {
+    width: 100%;
+    max-height: 3.5rem;
+    line-height: 1.7rem;
+    margin-bottom: 1.6rem;
+    color: #838383;
+    text-align: justify;
+    text-indent: 2rem;
+    overflow: hidden;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item ul.d-list-ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item ul.d-list-ul li {
+    height: 2.6rem;
+    line-height: 2.6rem;
+    padding-left: 1.5rem;
+    background-image: url(../img/dot.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0.5rem;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item ul.d-list-ul li .d-date {
+    float: right;
+    color: #9A9999;
+    font-size: 1rem;
+}
+
+.d-bottom-area .d-list-area .d-list-block .d-block-item ul.d-list-ul li a.d-news-link {
+    color: #1E1E1E;
+    display: inline-block;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.list-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 4rem;
+    color: #AC1F25;
+    margin-left: 1rem;
+}
+
+.centerText {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-indent: 2em;
+}

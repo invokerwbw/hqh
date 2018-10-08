@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>第十届海内外高端人才交流会网上对接平台</title>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/index.css}">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/jquery.vm-carousel.css}">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/mediaQ.css}">
+    <!-- 包括所有已编译的插件 -->
+    <script type="text/javascript" th:src="@{/js/jquery-1.9.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/modernizr.js}"></script>
+    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!--[if lt IE 9]>
+    <script th:src="@{~/js/html5shiv.js}"></script>
+    <script th:src="@{~/js/respond.min.js}"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="d-container-fluid">
+    <!--上半部分-->
+    <div class="d-top-area">
+        <header><img src="img/top_title.png" class="d-top-title"/><img src="img/top_title_mobile.png"
+                                                                       class="d-top-title-mobile"/></header>
+        <!-- 轮播 -->
+        <div class="d-slide-area">
+            <div class="htmleaf-container">
+                <div class="d-container-fluid"><!-- container -->
+                    <ul class="vmcarousel-centered vmc-centered">
+                        <li>
+                            <div class="slide-div"><a href="javascript:void(0);"><img src="img/img1.jpg"/></a>
+                                <p class="d-imgtit"></p></div>
+                        </li>
+                        <li>
+                            <div class="slide-div"><a href="javascript:void(0);"><img src="img/img2.jpg"/></a>
+                                <p class="d-imgtit"></p></div>
+                        </li>
+                        <li>
+                            <div class="slide-div"><a href="javascript:void(0);"><img src="img/img3.jpg"/></a>
+                                <p class="d-imgtit"></p></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.vm-carousel.js"></script>
+        <script type="text/javascript">
+            jQuery(function ($) {
+                $('.vmcarousel-centered').vmcarousel({
+                    centered: true,
+                    start_item: 0,
+                    autoplay: false,
+                    infinite: true
+                });
+            });
+        </script>
+    </div>
+    <!--下半部分-->
+    <div class="d-bottom-area">
+        <!--项目发布区域-->
+        <!--<div class="d-xmfb-area">
+            <img src="img/pro_publish.png" class="d-xmfb-img"/>
+            <img src="img/btn_login.png" class="d-xmfb-btn" onclick="alert('没事点两下')"/>
+        </div>-->
+        <!--列表展示区域-->
+        <div class="d-list-area">
+            <div class="d-list-block">
+                <!-- 个人项目 -->
+                <div class="d-block-item">
+                    <p class="d-ul-title"><span class="d-item-name d-fleft">个人项目</span><span
+                            class="d-item-more d-fright"><a th:href="@{/more(type=1)}"
+                                                            style="color: #AC1F25">more</a></span></p>
+                    <!--<p class="d-news-title"><a href="#" title="">山东省第九届海洽会“抢”人才大大大大所谁打啊</a></p>
+                    <p class="d-news-content">防守打法都是局方都是局方的没你说的没你说的你发的范德萨发顺丰的防守打法大防守打法都是局方都是局方的没你说的没你说的你发</p>-->
+                    <ul class="d-list-ul">
+                        <li th:each="data : ${gr}">
+                            <a th:href="@{/detail(type=3,key=${data['obj01']})}" class="d-news-link"
+                               th:text="${data['obj02']}"></a><span class="d-date"
+                                                                    th:text="'['+${data['obj04']}+']'"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 单位项目 -->
+                <div class="d-block-item">
+                    <p class="d-ul-title"><span class="d-item-name d-fleft">单位项目</span><span
+                            class="d-item-more d-fright"><a th:href="@{/more(type=2)}"
+                                                            style="color: #AC1F25">more</a></span></p>
+                    <!--<p class="d-news-title"><a href="#" title="">山东省第九届海洽会“抢”人才大大大大所谁打啊</a></p>
+                    <p class="d-news-content">防守打法都是局方都是局方的没你说的没你说的你发的范德萨发顺丰的防守打法大防守打法都是局方都是局方的没你说的没你说的你发</p>-->
+                    <ul class="d-list-ul">
+                        <li th:each="data : ${dw}">
+                            <a th:href="@{/detail(type=4,key=${data['obj01']})}" class="d-news-link"
+                               th:text="${data['obj02']}"></a><span class="d-date"
+                                                                    th:text="'['+${data['obj04']}+']'"></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="d-list-area">
+            <div class="d-list-block">
+                <!-- 海外留学人员项目 -->
+                <div class="d-block-item">
+                    <p class="d-ul-title"><span class="d-item-name d-fleft">海外留学人员项目</span><span
+                            class="d-item-more d-fright" onclick="javascript:void(0);">more</span></p>
+                    <!--<p class="d-news-title"><a href="#" title="">山东省第九届海洽会“抢”人才大大大大所谁打啊</a></p>
+                    <p class="d-news-content">防守打法都是局方都是局方的没你说的没你说的你发的范德萨发顺丰的防守打法大防守打法都是局方都是局方的没你说的没你说的你发</p>-->
+                    <ul class="d-list-ul">
+                        <li th:each="data : ${hw}">
+                            <a href="javascript:void(0);" class="d-news-link" th:text="${data['obj02']}"></a><span
+                                class="d-date"
+                                th:text="'['+${data['obj04']}+']'"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 国内博士后项目 -->
+                <div class="d-block-item">
+                    <p class="d-ul-title"><span class="d-item-name d-fleft">国内博士后项目</span><span
+                            class="d-item-more d-fright" onclick="javascript:void(0);">more</span></p>
+                    <!--<p class="d-news-title"><a href="#" title="">山东省第九届海洽会“抢”人才大大大大所谁打啊</a></p>
+                    <p class="d-news-content">防守打法都是局方都是局方的没你说的没你说的你发的范德萨发顺丰的防守打法大防守打法都是局方都是局方的没你说的没你说的你发</p>-->
+                    <ul class="d-list-ul">
+                        <li th:each="data : ${gn}">
+                            <a href="javascript:void(0);" class="d-news-link" th:text="${data['obj02']}"></a><span
+                                class="d-date"
+                                th:text="'['+${data['obj04']}+']'"></span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
