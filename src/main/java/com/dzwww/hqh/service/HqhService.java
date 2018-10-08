@@ -4,6 +4,9 @@ import com.dzwww.hqh.entity.PageData;
 
 import java.util.Map;
 
+/**
+ * 服务层
+ */
 public interface HqhService {
 
     /**

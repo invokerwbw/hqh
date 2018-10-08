@@ -12,9 +12,13 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 服务层实现类
+ */
 @Service
 public class HqhServiceImpl implements HqhService {
 
+    //WebService地址
     private static final String URL = "http://124.128.251.110:9007/sdmanager/services/hqh?wsdl";
 
     private static final Client CLIENT = JaxWsDynamicClientFactory.newInstance().createClient(URL);
@@ -109,7 +113,7 @@ public class HqhServiceImpl implements HqhService {
                     Data data = xmlMapper.readValue(object2, Data.class);
                     System.out.print(data);
                 } else {
-                    Error error =  xmlMapper.readValue(object2, Error.class);
+                    Error error = xmlMapper.readValue(object2, Error.class);
                     System.out.print(error.getError());
                 }
             }
